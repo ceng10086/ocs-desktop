@@ -6,6 +6,9 @@ on:
       - "*"
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   build:
     strategy:
@@ -64,8 +67,7 @@ jobs:
             ./packages/app/dist/*.dmg
             ./packages/app/dist/*.AppImage
             ./packages/app/dist/*.zip
-            ./packages/app/dist/*.deb
-            ./packages/app/dist/*.rpm
+
           if-no-files-found: error
 
   release:
@@ -157,8 +159,7 @@ jobs:
             ./packages/app/dist/*.dmg
             ./packages/app/dist/*.AppImage
             ./packages/app/dist/*.zip
-            ./packages/app/dist/*.deb
-            ./packages/app/dist/*.rpm
+
 
       - name: 安装腾讯云 CLI
         run: pip install coscmd
