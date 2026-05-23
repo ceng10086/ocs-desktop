@@ -14,9 +14,6 @@ jobs:
           - os: windows-latest
             platform: win
             arch: x64
-          - os: macos-13
-            platform: mac
-            arch: x64
           - os: macos-latest
             platform: mac
             arch: arm64
@@ -137,7 +134,7 @@ jobs:
           ### Windows (不支持Win7)
           - [64位(常用)](${{ env.DOWNLOAD_URL }}ocs-${{ env.VERSION }}-setup-win-x64.exe) | [64位(压缩包版本)](${{ env.DOWNLOAD_URL }}ocs-${{ env.VERSION }}-setup-win-x64.zip) | [ARM64(不常用)](${{ env.DOWNLOAD_URL }}ocs-${{ env.VERSION }}-setup-win-arm64.exe)
           ### macOS
-          - [M系列芯片](${{ env.DOWNLOAD_URL }}ocs-${{ env.VERSION }}-setup-mac-arm64.dmg) | [Intel芯片](${{ env.DOWNLOAD_URL }}ocs-${{ env.VERSION }}-setup-mac-x64.dmg)
+          - [macOS (Apple Silicon)](${{ env.DOWNLOAD_URL }}ocs-${{ env.VERSION }}-setup-mac-arm64.dmg)
 
           ### Linux
           - [AppImage](${{ env.DOWNLOAD_URL }}ocs-${{ env.VERSION }}-setup-linux-x86_64.AppImage)
